@@ -3,7 +3,7 @@ using Domain.Entities.ProductModule;
 
 namespace Domain.Contracts
 {
-    internal interface IGenericRepository<TEntity,TKey> where TEntity:BaseEntity<TKey>
+    public interface IGenericRepository<TEntity,TKey> where TEntity:BaseEntity<TKey>
     {
         //Get All
         Task<IEnumerable<TEntity>> GetAllAsync(bool asNoTracking = false);
